@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ComponentInheritance';
+  messages: string[] = [];
+
+  gatherCount(message) {
+    this.messages.push(message);
+  }
+
+  gatherPage(pageNo) {
+    this.messages.push(`I am at page ${pageNo} now.`);
+  }
 }
